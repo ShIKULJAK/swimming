@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+// VAR
+$font: 'Roboto',
+sans-serif;
+$orange:#ffaf00;
+$blue:#ba5cff;
+$pink:#ff3050;
+$violet:#ff14e7;
+$darkOrange:#ff8615;
+$darkBlue:#155ed1;
+$darkPink:#ff1c98;
+$darkViolet:#b61fe0;
+$navbarBrand:#4073de;
+$red:#ff3050;
+$darkGray:#6a6969;
+$lightGray:#f0f0f0;
+$lightBlue:#0099e1;
+$lightBluee:#007bc6;
+
+/* ------------------
+        MIXINS
+-------------------*/
+
+@mixin flex($justify,
+$align,
+$direction) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+
+/* ------------------
+     BASIC STYLES
+-------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    font-size: $font;
+    line-height: 1.6;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400 !important;
+}
+
+p {
+    font-weight: 300;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+sub {
+    font-size: 50%;
+    line-height: 0;
+    position: relative;
+    top: -10px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-fluid {
+    width: 95%;
+}
+
+
+/* ------------------
+         NAV
+-------------------*/
+
+.navbar {
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: white;
+    .navbar-brand {
+        color: $navbarBrand;
+        font-size: 3rem;
+    }
+    ul {
+        height: 120px;
+        text-align: center;
+    }
+    li {
+        text-align: center;
+        padding: 0 10px;
+        margin: 0 40px;
+        &:hover {
+            background: linear-gradient($darkViolet, $darkBlue);
+        }
+    }
+    li a {
+        color: black;
+        font-weight: 700 !important;
+        font-size: 1.2rem;
+        padding: 45px;
+        height: 100%;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+
+/* ------------------
+         NAV
+-------------------*/
+
+header {
+    background: url(img/header.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ------------------
+        CARDS
+-------------------*/
+
+#about-us {
+    position: relative;
+    top: -180px;
+    .container-fluid {
+        margin-bottom: -130px;
+        .row {
+            .col-lg-3 {
+                .card-1 {
+                    background: linear-gradient($orange, $darkOrange);
+                    h5 {
+                        width: 80%;
+                    }
+                }
+                .card-2 {
+                    background: linear-gradient($blue, $darkBlue);
+                    h5 {
+                        width: 80%;
+                    }
+                }
+                .card-3 {
+                    background: linear-gradient($pink, $darkPink);
+                    h5 {
+                        width: 80%;
+                    }
+                }
+                .card-4 {
+                    background: linear-gradient($violet, $darkViolet);
+                    h5 {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+    color: white;
+    p {
+        width: 70%;
+    }
+    a {
+        color: white;
+    }
+}
+
+
+/* ------------------
+        GALLERY
+-------------------*/
+
+#gallery {
+    @media(max-width: 767px) {
+        .row:last-child {
+            .col-sm-12:first-child {
+                order: 2;
+            }
+            .col-sm-12:last-child {
+                order: 1;
+            }
+        }
+    }
+    p {
+        color: darkGray;
+    }
+    button {
+        background: linear-gradient(to right, $orange, $red);
+        border: none;
+        padding: 15px 50px;
+        color: white;
+        cursor: pointer;
+        transition: .2s ease;
+        &:hover {
+            background: linear-gradient(to left, $orange, $red);
+        }
+    }
+}
+
+
+/* ------------------
+        BLOG
+-------------------*/
+
+#blog {
+    background: url(img/rated.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 80vh;
+    color: white;
+    .col-md-6 {
+        height: 80vh;
+        background: linear-gradient(rgba($pink, .6), rgba($violet, .9));
+        button {
+            padding: 15px 50px;
+            background: white;
+            border: none;
+        }
+    }
+}
+
+#events {
+    color: white;
+    .col-md-6:first-child {
+        background: linear-gradient($orange, $darkOrange);
+        height: 80vh;
+        ul li {
+            // margin: 55px auto;
+            height: 12vh;
+        }
+        ul li {
+            // margin: 55px auto;
+            padding: 0;
+            font-size: 2rem;
+        }
+    }
+    .col-md-6:last-child {
+        // background: url(img/events.jpg);
+        // background-size: cover;
+        // background-position: center;
+        img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+        }
+    }
+}
+
+#people-card {
+    // margin-top: 200px;
+    .col-lg-3 {
+        text-align: center;
+        // margin-right: 20px;
+        div {
+            background-color: $lightGray;
+            position: relative;
+            top: -100px;
+            min-height: 400px;
+            width: 100%;
+            padding: 100px 30px 50px
+        }
+        img {
+            width: 70%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 300px;
+            position: relative;
+            z-index: 9;
+        }
+        p {
+            color: $darkGray;
+        }
+        h6 {
+            color: $orange;
+            font-size: 2.2rem;
+        }
+    }
+}
+
+
+/* ------------------
+       CONTACTS
+-------------------*/
+
+#contacts {
+    margin: 50px 0;
+    .col-md-6:first-child {
+        color: white;
+        padding: 50px;
+        background: linear-gradient($lightBlue, $lightBluee);
+    }
+    span {
+        font-size: 2rem;
+        i {
+            background: white;
+            border-radius: 90px;
+            font-size: 1.6rem;
+            padding: 10px 15px;
+            color: $lightBlue;
+        }
+    }
+    ul li i:nth-child(1) {
+        background: white;
+        border-radius: 90px;
+        margin-right: 50px;
+        font-size: 1.6rem;
+        padding: 10px;
+        color: $lightBlue;
+    }
+}
+
+
+/* ------------------
+       FOOTER
+-------------------*/
+
+footer {
+    color: gray;
+}
