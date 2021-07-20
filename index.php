@@ -22,11 +22,11 @@
 <body>
     <!-- NAV -->
 
-    <nav class="navbar navbar-expand-lg" id="nav">
+    <nav class="navbar fixed-top navbar-expand-lg" id="nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Swimming<sub>&reg;</sub></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon fas fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -237,11 +237,11 @@
     <section id="contacts">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
-                    <h4>Contacts</h4>
-                    <p>Address: 4578 Marmora Road, Glasgow D04 89GR</p>
+                <div class="col-md-6 d-flex flex-column justify-content-evenly">
+                    <h4 class="display-2">Contacts</h4>
+                    <p>Address: 4578 Marmora Road, <br> Glasgow D04 89GR</p>
                     <span><i class="fas fa-mobile-alt"></i>&nbsp; 1-800-2345-6789</span>
-                    <p class="my-4">Email:youremil.com</p>
+                    <p class="my-4">Email:youremail.com</p>
                     <ul class="d-flex justify-content-start p-0">
                         <li>
                             <a href=""><i class="fab fa-instagram"></i></a>
@@ -284,6 +284,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+    <script src="main.js"></script>
 </body>
 
 </html>
